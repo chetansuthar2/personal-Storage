@@ -10,7 +10,7 @@ export async function connectToDatabase() {
 
   try {
     // Use environment variable for MongoDB connection string
-    const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/personal-data-storage"
+    const uri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/personal-data-storage'
 
     client = new MongoClient(uri)
     await client.connect()
